@@ -29,13 +29,17 @@ Es posible que no sólo queramos hacer algo si una determinada condición se cum
 ___else___
 
 
-Si tenemos un código en el que "if" no se cumple entonces podemos utilizar la sentencia "else" asi das otra condición. 
-    ~~~
+Si tenemos un código en el que "if" no se cumple entonces podemos utilizar la sentencia "else" asi das otra condición.  
+
+
+~~~
     edad = 18
     if edad >= 18:
         print("Puedes conducir")
     else:
         print("No puedes conducir")
+~~~  
+
 
 
 ___elif___
@@ -410,7 +414,7 @@ El valor de retorno de la función lambda es el valor al que se evalua esta expr
 Devolvemos un valor de nombre completo y lo almacenamos en la variable nombre_completo.
 Después de llamar a lambda escribimos una serie de argumentos, en este caso, nombre y apellido. Lo que vaya dentro de las comillas es lo que devolverá lambda. En este caso hemos formateado una cadena que toma la variable de nombre y apellido.
 Después hay que imprimirlo porque lambda sólo devuelve valor. 
-Nos daría como resultado: AlbaGonzález.  
+Nos daría como resultado: Alba González.  
 
 Las funciones lambda son anónimas, no tienen un nombre formal como las funciones 'def'. Generalmente se asignan a una variable para poder llamarlas.
 La sintáxis es concisa mucho más que en las funciones 'def'. 
