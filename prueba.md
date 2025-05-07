@@ -7,7 +7,7 @@ ___if___
 Una sentencia condicional nos permite establecer si algo es verdadero o falso.
 El condicional se utiliza cuando quieres que se cumpla un código con una condición específica y que se ejecute si esto es cierto y que se ejecute otro código cuando la condición no se cumple.  
 
-Nos permite manejar distintas deciones y controlar el flujo de los programas.  
+Nos permite manejar distintas decisiones y controlar el flujo de los programas.  
 
 Utilizamos "if" para indicar que si lo que pongo en el código es verdadero quiero que lo ejecute, si es falso, no quiero que lo  ejecute.
 
@@ -88,7 +88,7 @@ Nos imprimirá toda la lista.
 En esta lista como podemos ver no aparece 'Fermín' porque no estaba definido dentro de la lista.
 
 En este ejemplo "players" es la variable que hay que mantener con el nombre idéntico. Es la colección con la que vamos a trabajar.
-La primera variable "player" puede tener cualquier nombre. Puedes poner en singular la variable principal o simplemente decir "x". Lo que representa esto es que cada vez que este bucle progresa y lo itera, va a cambiar. La primera vez va  a cambiarlo por jugador "Pedri", luego "Gabi" y luego "Ferrán". Así hasta acabar con la colección de elementos de la lista.
+La primera variable "player" puede tener cualquier nombre. Puedes poner en singular la variable principal o simplemente decir "x". Lo que representa esto es que cada vez que este bucle progresa y lo itera, va a cambiar. La primera vez va a cambiarlo por jugador "Pedri", luego "Gabi" y luego "Ferrán". Así hasta acabar con la colección de elementos de la lista.
 
 _Bucles en tuplas_
 
@@ -110,33 +110,33 @@ La sintaxis es similar para usar los blucles, aunque ahora no trabajamos con un 
 Luego tenemos que crear una función "item" y como cualquier función debe llevar paréntesis al final() y después dos puntos : .
 La función item nos va a permitir crear una visita dentro del diccionario. Nos da acceso a todos los elementos y por eso podemos pasar dos variables.
 
-    for position, player in players. item():
+    for posición, jugador in jugadores.item():
 
 ~~~
-    players = {
+    jugadores = {
         'medio' : 'Pedri',
         'lateral' : 'Gabi',
         'central' : 'Ferrán'
     }
-    for position, player in players.items():
-        print('Position', position)
-        print('Player Name, player)
+    for posición, jugador in jugadores.items():
+        print('Posición', posición)
+        print('Nombre Jugador', jugador)
 
 ~~~  
 
 
 Nuestro primer item que es 'Pedri' va a ser asignado con la posición 'medio'.
-La variable possition es igual a la clave y jugador es igual al valor.
+La variable posición es igual a la clave y jugador es igual al valor.
 La importancia de la sangría es clave después de dos puntos ':' en Python. Por eso print en estos casos tiene que ir con sangría. Siempre pueden ser de dos espacios o cuatro.
 Así, esto nos devolvería lo siguiente:  
 
 ~~~
-    Position medio
-    Player Name Pedri
-    Position lateral
-    Player Name Gabi
-    Position central
-    Player Name Ferrán
+    Posición medio
+    Nombre Jugador Pedri
+    Posición lateral
+    Nombre Jugador Gabi
+    Posición central
+    Nombre Jugador Ferrán
 ~~~  
 
 
@@ -168,7 +168,9 @@ for nombre in nombres:
         print(f' {nombre} estas autorizado')
 ~~~  
 
-Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario con nombre Raquel camnbia el comportamiento. Pero lo más importante es que sigue adelante y continúa analizando el resto de elementos. Continue le dice al programa que tiene que continuar con el bucle. Sigue itinerando sin parar una vez que encuentra lo que busca. Hce bucle en todos los nombres de la lista.  
+Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario con nombre Raquel, camnbia el comportamiento. Pero lo más importante es que sigue adelante y continúa analizando el resto de elementos. Continue le dice al programa que tiene que continuar con el bucle. Sigue itinerando sin parar una vez que encuentra lo que busca. Hace bucle en todos los nombres de la lista.   
+
+
 ~~~
     Ibai estas autorizado
     Alba estas autorizado
@@ -187,6 +189,8 @@ Esto es lo opuesto a lo que haría "break". Este operador busca y destruye. Mira
 ~~~  
 
 En la misma línea de la declaración "print" pongo "break" porque tienen que estar anidados dentro del condicional "if". El último "print" sale fuera porque cualquier cosa despúes de "break" no pasará anidado dentro del bloque de código.  
+
+
 ~~~
     Ibai
     Alba
@@ -199,14 +203,14 @@ El programa sólo sirve para decirnos en que indice se encuentra nuestro element
 
 __Bucle while__
 
-Un bucle while es una estructura de control de flujo en programación que permite ejecutar repetidamente un bloque de código mientras una condición específica se evalúa como verdadera. La condición se evalúa al principio de cada iteración del bucle, y el bloque de código se ejecuta mientras la condición siga siendo verdadera. Si la condición es falsa desde el principio, el bloque de código dentro del while nunca se ejecutará
+Un bucle while es una estructura de control de flujo en programación que permite ejecutar repetidamente un bloque de código mientras una condición específica se determina como verdadera. La condición se evalúa al principio de cada iteración del bucle, y el bloque de código se ejecuta mientras la condición siga siendo verdadera. Si la condición es falsa desde el principio, el bloque de código dentro del while nunca se ejecutará.
 
 En el bucle while no se conoce el número de repeticiones que quieres en un programa y puede repetirse indefinidamente siempre que la secuencia sea verdadera.
-Hay que especificar cuando tiene que detenerse porque puede convertirse en un bucle infinito y el programa no se detiene hasta que cambie la condición. Puede hacer que un programa se bloquee.
+Hay que especificar cuando tiene que detenerse porque puede convertirse en un bucle infinito y el programa no se va a detener nunca hasta que cambie la condición. Puede hacer que un programa se bloquee.
 Un valor centinela es el término para definir cuando debe pararse este bucle.
 
 El bucle while es útil cuando no se conoce de antemano cuántas veces se necesita ejecutar el código, sino que la ejecución depende de una condición. 
-Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la solicitud hasta que se ingrese una entrada correcta.  
+Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la solicitud hasta que se ingrese una entrada correcta. Si introduce un dato erroneo entoncés el programa se detiene.  
 
 ~~~
     contador= 0
@@ -216,13 +220,17 @@ Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la 
 
     print('Bucle terminado')  
 ~~~  
+
+
 En este ejemplo el bucle while se ejecutará 5 veces. Desde el 0 al 4.
-La condición es que el contador sea menor que 5 y el bucle continuará ejecutándose hasta que esto deje de ser cierto. Mientras la variable contador sea menor que 5, el código dentro del bloque se ejecuta. 
+La condición es que el contador sea menor que 5 y el bucle continuará ejecutándose hasta que esto deje de ser cierto. Mientras la variable contador sea menor que 5, el código dentro del bloque se ejecuta.  
+
+
 Imprimimos el valor que hemos dado al principio (contador=0) y luego tenemos que ir incrementando ese contador en 1. Este paso es importante para que la condición se vuelva falsa en algún momento y el bucle se detenga. Cuando esto suceda mostramos 'Bucle terminado'.
 
 No es tan intuitivo como el bucle for. Se usa bastante menos.  
 
-Para adininar un deteminado número o en juegos de adivinanzas es una buena opción este bucle. En estos casos no se sabe cuantas veces se debe iterar el programa.
+Para adivinar un deteminado número o en juegos de adivinanzas es una buena opción este bucle. En estos casos no se sabe cuantas veces se debe repetir el programa.
 Pides al usuario que adivine un número y hasta que acierte, el programa seguirá ejecutándose. (No podríamos usar el bucle "for in" porque no sabemos cuando va a acertar).  
 
 ~~~
@@ -247,7 +255,7 @@ Pides al usuario que adivine un número y hasta que acierte, el programa seguir�
 Se importa primero el módulo randow para generar un número secreto aleatorio y queremos que ese número entero aleatorio se encuentre entre el 1 y el 10. Ambos inclusive.
 El primer intento damos un número que sea falso para que el bucle while se ejecute al menos una vez. Y asi seguirá ejecutándose hasta que el usuario acierte el número secreto.  
 
-Los bucles son útiles porque nos permiten ejecutar repetidamente un bloque de código sin tener que escribirlo varias veces.
+Los **bucles son útiles** porque nos permiten ejecutar repetidamente un bloque de código sin tener que escribirlo varias veces.
 Si necesitas realizar la misma tarea múltiples veces pero con ligeras variaciones, puedes ahorrar tiempo y reduces la probabilidad de errores. El código se vuelve más compacto y fácil de entender.
 Iterar sobre una secuencia ya sea lista, tupla o diccionario significa recorrer cada elemento uno por uno. Asi los bucles consiguen crear programas dinámicos capaces de realizar tareas repetitivas de forma eficiente.  
 
@@ -256,12 +264,12 @@ Iterar sobre una secuencia ya sea lista, tupla o diccionario significa recorrer 
 3.***LISTA POR COMPRESIÓN EN PYTHON***
 
 Es una forma concisa de crear listas en Python.
-Una lista por comprensión es una construcción sintáctica elegante y concisa que permite crear nuevas listas basadas en listas existentes de una manera más legible y a menudo más eficiente que utilizando bucles for tradicionales.  
+Una lista por comprensión es una construcción sintáctica elegante y concisa que permite crear nuevas listas basadas en listas existentes de una manera más clara y a menudo más eficiente que utilizando bucles for tradicionales.  
 
-Una lista por comprensión ofrece una forma abreviada de aplicar una expresión a cada elemento de una secuencia (como una lista, tupla o rango) y, opcionalmente, filtrar los elementos que cumplen una determinada condición, todo dentro de una única línea de código.
+Una lista por comprensión ofrece una forma abreviada de poner una expresión a cada elemento de una secuencia (como una lista, tupla o rango) y, opcionalmente, filtrar los elementos que cumplen una determinada condición, todo dentro de una única línea de código.
 
 
-La compresión de listas es una forma eficiente de iterar una lista con pocas líneas de código. En programas grandes la eficencia es fundamental, ocupar poco espacio y menos código.  
+La compresión de listas es una forma eficiente de iterar una lista con pocas líneas de código. En programas grandes la eficencia es fundamental, ocupar poco espacio y menos código. Principalmente para evitar errores.
 
 ~~~
     my_list = ['good', 'play', 'futbol']
@@ -291,29 +299,29 @@ Nos daría los elementos de "my_list" multiplicados por dos [2, 4, 6, 8, 10]
 
 4.***ARGUMENTO EN PYTHON***
 
-En Python, un argumento es un valor o expresión que se pasa a una función cuando se la llama. Estos argumentos se utilizan para proporcionar a la función la información que necesita para realizar su tarea. Los argumentos pueden ser de tipo posicional (se pasan por posición) o de tipo nombre (se pasan con su nombre).  
+En Python, un argumento es un valor o expresión que se pasa a una función cuando se la llama. Estos argumentos se utilizan para proporcionar a la función la información que necesita para realizar su tarea. Los argumentos pueden ser de tipo posicional (se pasan por posición) o de tipo nombre (se pasan con un nombre).  
 
 
 
 __Argumentos Posicionales__  
 
-Cada vez que pasamos valores de argumento a funciones usamos lo que se llama argumentos posicionales. Según el sitio o el valor que le quieras dar, el orden en que se pasan los valores en la definición de la función.
+Cada vez que pasamos valores de argumento a funciones usamos lo que se llama argumentos posicionales. Según el sitio o el valor que le quieras dar. Deben incluírse en la posición u orden adeciuados. El primer argumento posicional siempre debe aparecer el primero a la hora de llamar a la función. El segundo en segundo lugar y así sucesivamente. 
 
-    ~~~
-         def suma(a, b): 
-            return a + b 
-         print(suma(3, 5)) 
-    ~~~  
+~~~
+    def suma(a, b): 
+        return a + b 
+    print(suma(3, 5)) 
+~~~  
 
 En este caso, 3 y 5 son argumentos posicionales que se pasan a los parámetros a y b, respectivamente.  
 
 Esto está bien para funciones pequeñas, en grandes los argumentos posicionales pueden generar confusión. 
 
-    ~~~
-        def nombre_completo('nombre', 'apellido'):
-            print(f' {nombre}{apellido})
-        nombre_completo ('Alba', 'Gonzalez')
-    ~~~  
+~~~
+    def nombre_completo('nombre', 'apellido'):
+        print(f' {nombre}{apellido})
+    nombre_completo ('Alba', 'Gonzalez')
+~~~  
 
 Alba pasará siempre como primer argumento ya que lo hemos colocado como primer elemento. González será el último valor.  
 Todo se basa en la posición de los argumentos.
@@ -326,37 +334,39 @@ __Argumentos de nombre__
 
 Son aquellos que se pasan a la función especificando el nombre del parámetro al que se asignan.  
 
-    ~~~
-        def suma(a, b):
-            return a + b:
-        print(suma(b=5, a=3))
-    ~~~  
+~~~
+    def suma(a, b):
+        return a + b:
+    print(suma(b=5, a=3))
+~~~  
 
 
 En este caso, b=5 y a=3 son argumentos de nombre.
 El orden en que se pasan los argumentos de nombre no importa.  
 
-    ~~~
-        def nombre_completo('nombre', 'apellido'):
-            print (f'{nombre}{apellido})
-        nombre_completo(nombre='Alba', apellido= 'González')
-    ~~~  
+~~~
+    def nombre_completo('nombre', 'apellido'):
+        print (f'{nombre}{apellido})
+    nombre_completo(nombre='Alba', apellido= 'González')
+~~~  
 
 Aquí los argumentos con nombre nos permiten ser mucho más explícitos. En lugar de simplemente pasar una cadena pasamos el nombre. El programa examina la llamada a función y verá que hemos configurado argumentos con nombre. Primero coge el primer elemento y así sucesivamente. Pero no importa la posición en la que están colocados los argumentos.
 Además, Python permite utilizar indistintamente argumentos de nombre o posicionales en las funciones como tú desees. Puedes intercambiarlos.  
+
+
 Lo ideal es usar argumentos con nombre cuando hay más de dos argumentos, para evitar problemas de colocar los valores en el orden incorrecto o llamarlos con un nombre distinto.  
 
 __Argumento con valor por defecto__  
 
 Son argumentos que se les asigna un valor en el código de la función, pero también se pueden sobrescribir en tiempo de ejecucuón.  
 
-    ~~~ 
-        def multiplicación (a, b **=**  6):
-            return a * b
+~~~ 
+    def multiplicación (a, b **=**  6):
+        return a * b
 
-        print1= multiplicación (2)
-        print2= multiplicación (2, 5)
-    ~~~  
+    print1= multiplicación (2)
+    print2= multiplicación (2, 5)
+~~~  
 
 El primer resultado nos daría 12 (2 por 6, mantenemos el valor que hemos puesto arriba) y el segundo 10 (2 por 5, hemos sobrescrito el valor de b).  
 Se pueden definir valores por defecto para los argumentos en caso de no ser enviados en la función.  
@@ -366,12 +376,12 @@ __Argumentos con palabras clave__
 Se definen sin más mediante la palabra clave seguida del signo igual y su valor correspondiente. Hacen nuestro código más legible y adaptable. Porque al ver la llamada a la función, es inmediatamente obvio qué valor se está asignando a cada parámetro. Esto hace que el código sea más fácil de entender. No tienes que poner los elementos en orden.
 Puedes pasarlos en cualquier orden, siempre y cuando especifiques el nombre del parámetro.  
 
-    ~~~
-        def despedir(nombre, despedida):
-            print(f' {nombre} {despedida}')
-        despedir(nombre="Ibai", despedida="adios")
-        despedir(despedida= 'Adios' , nombre= 'Ibai')
-    ~~~  
+~~~
+    def despedir(nombre, despedida):
+        print(f' {nombre} {despedida}')
+    despedir(nombre="Ibai", despedida="adios")
+    despedir(despedida= 'Adios' , nombre= 'Ibai')
+~~~  
 
   
 
@@ -388,15 +398,16 @@ Una lambda siempre devuelve un valor.
 Su sintaxis es:
     argumentos lambda: expresión
 
-El valor de retorno de la función lambda es el valor al que se evalua esta expresión.
+El valor de retorno de la función lambda es el valor al que se evalua esta expresión.  
 
-    ~~~
-        nombre_completo= lambda first,last: f'{first}{last}'
-        nombre= nombre_completo ('Alba', 'Gonzalez')
-        print(nombre)
-    ~~~
+~~~
+    nombre_completo= lambda first,last: f'{first} {last}'
+    nombre= nombre_completo ('Alba', 'Gonzalez')
+    print(nombre)
+~~~  
 
-Devolvemos un valor de nombre completo y lo almacenamos en la variable full_name.
+
+Devolvemos un valor de nombre completo y lo almacenamos en la variable nombre_completo.
 Después de llamar a lambda escribimos una serie de argumentos, en este caso, nombre y apellido. Lo que vaya dentro de las comillas es lo que devolverá lambda. En este caso hemos formateado una cadena que toma la variable de nombre y apellido.
 Después hay que imprimirlo porque lambda sólo devuelve valor. 
 Nos daría como resultado: AlbaGonzález.  
@@ -413,7 +424,8 @@ La función lambda suele utilizarse para lo siguiente: como argumento que son pa
     es_par= lambda_numero = numero %2 ==0
     print(f'(numero 10 es par?))
 
-~~~
+~~~  
+    
 
 Las funciones lambda pueden aceptar cero o más argumentos, pero __sólo una expresión__.   
 
@@ -425,13 +437,14 @@ Las funciones lambda pueden aceptar cero o más argumentos, pero __sólo una exp
 
 Nos daría como resultado 25.  
 
-Ahora pasamos dos argumentos:
+Ahora pasamos dos argumentos  
 
 ~~~
     f= lambda x, y : x* y
     f(5,2)
-    
-~~~      
+~~~  
+
+
 Nos daría como resultado 10.
 
 
@@ -441,18 +454,42 @@ Nos daría como resultado 10.
 
 
 Un paquete es una colección de archivos, módulos y dependencias relacionados que pueden utilizarse repetidamente en diferentes aplicaciones y problemas.
-Pip es un gestor de paquetes estándar en Python. Automatiza el proceso de instalación,actualización, configuración y eliminación de paquetes de un ordenador de forma coherente.
-Hay que instalarlo en nuestro ordenador para poder utilizarlo. Simplemente tienes que utulizar pip install. Es el programa de instalación más usado.
+Pip es un gestor de paquetes estándar en Python.  
+
+Pip es un sistema de gestión de paquetes para Python. Su nombre proviene de “Pip Installs Packages” o “Pip Instala Paquetes” en español.
+
+Con pip, podemos instalar, actualizar y desinstalar paquetes de Python e un ordenador de manera sencilla.
+
+Los paquetes son colecciones de módulos y funciones que pueden ser distribuidos y utilizados por otros programadores.  
+
+
+Hay que instalarlo en nuestro ordenador para poder utilizarlo. Simplemente tienes que utilizar pip install. Es el programa de instalación más usado.
+
 ~~~
     pip install nombre-paquete
 ~~~  
 
+Para desintalarlo sólo hay que usar  
 
-Para desintalarlo sólo hay que usar
+
 ~~~
     pip uninstall nombre-paquete
 ~~~  
 
 
-Hay paquetes que están ya incorporados en Python o que podemos crear nosotros mismos. Con pip podemos incorporar módulos creados por otros desarrolladores y usarlos en nuestros propios programas.
+Hay paquetes que están ya incorporados en Python o que podemos crear nosotros mismos. Con pip podemos incorporar módulos creados por otros desarrolladores y usarlos en nuestros propios programas.  
+
+Una vez instalado pip podemos gestionar paquetes diferentes...
+
+Sólo hay que llamar a pip seguido por install y el nombre del paquete.
+
+~~~
+    pip install requests
+~~~  
+
+Requests, por ejemplo, es un paquete muy utilizado para hacer solicitudes HTTP en Python.  
+
+
+
+
 
