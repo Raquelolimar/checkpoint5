@@ -1,8 +1,8 @@
 
-1.***CONDICIONALES***  
+# 1. CONDICIONALES  
 
 
-___if___
+<h2>if</h2>
 
 Una sentencia condicional nos permite establecer si algo es verdadero o falso.
 El condicional se utiliza cuando quieres que se cumpla un código con una condición específica y que se ejecute si esto es cierto y que se ejecute otro código cuando la condición no se cumple.  
@@ -26,7 +26,7 @@ y el bolque de código debe estar anidado.
 
 Es posible que no sólo queramos hacer algo si una determinada condición se cumple, sino que además queramos hacer algo de lo contrario. En este caso se utiliza el condicional "else". Si usamos "if" y es falso entonces podemos usar otra condición 'else'.
 
-___else___
+<h2>else</h2>
 
 
 Si tenemos un código en el que "if" no se cumple entonces podemos utilizar la sentencia "else" asi das otra condición.  
@@ -42,7 +42,7 @@ Si tenemos un código en el que "if" no se cumple entonces podemos utilizar la s
 
 
 
-___elif___
+<h2>elif</h2>
 
 Nos permite concatenar condiciones adicionales. Primero mira las dos primeras condiones. Si la primera es verdadera, sino mira la segunda. y si ambas condiciones son falsas, se ejecutará.
 
@@ -58,15 +58,15 @@ else:
 ~~~
 
 
-2.***BLUCLES EN PYTHON***  ¿Por qué son útiles?
+# 2.BLUCLES EN PYTHON  ¿Por qué son útiles?
 
 Los bucles son una herramienta para alterar el flujo normal de un programa. Nos permiten repetir una porción de código tantas veces como queramos.
 
-Hay dos tipos de bucles "for...in" y "while". Ambos se pueden usar para colecciones, rangos de números, listas, tuplas o diccionarios.
+Hay dos tipos de bucles *for...in* y *while*. Ambos se pueden usar para colecciones, rangos de números, listas, tuplas o diccionarios.
 ES imprescindible marcar un inicio y señalar las condiciones verdaderas o falsas. La iteración sucede cuando es verdadera y para cuando es falsa.
 Con for se produce un número limitado de veces, con while es indefinido hasta que cambia la condición.
 
-__Bucle for__
+<h2>Bucle for</h2>
 
 Con el bucle for se sabe cuántas veces se va a repetir el programa. 
 La iteración depende de la cantidad de objetos recogidos en las líneas de códigos y que finalizará cuando se cumplen todos los valores. Se aplica cuando el bloque a iterar tiene un número definido de elementos.
@@ -76,7 +76,7 @@ La iteración depende de la cantidad de objetos recogidos en las líneas de cód
 
 Sirven por ejemplo para detectar en una lista elementos con unas condiciones verdaderas.
 
-_Bucles en listas_
+<h3>Bucles en listas</h3>
 
         PLayers = ['Pedri', 'Gabi', 'Ferrán']
         player= 'Fermín'
@@ -94,7 +94,7 @@ En esta lista como podemos ver no aparece 'Fermín' porque no estaba definido de
 En este ejemplo "players" es la variable que hay que mantener con el nombre idéntico. Es la colección con la que vamos a trabajar.
 La primera variable "player" puede tener cualquier nombre. Puedes poner en singular la variable principal o simplemente decir "x". Lo que representa esto es que cada vez que este bucle progresa y lo itera, va a cambiar. La primera vez va a cambiarlo por jugador "Pedri", luego "Gabi" y luego "Ferrán". Así hasta acabar con la colección de elementos de la lista.
 
-_Bucles en tuplas_
+<h3>Bucles en tuplas</h3>
 
 Con una tupla el comportamiento es igual en cuanto a bucles.
 
@@ -107,11 +107,11 @@ Esto nos devuelve la tupla de la misma forma que si hubieramos usado una lista.
     Gabi
     Ferrán
 
-_Bucles en diccionario_
+<h3>Bucles en diccionario</h3>
 
 La sintaxis es similar para usar los blucles, aunque ahora no trabajamos con un único elemento, necesitamos coger la clave y el valor. Despues de pasar el bucle for hay que darle dos elementos. Si antes teníamos jugador, ahora le damos tambien un valor de la posición en la que juega cada uno.
 
-Luego tenemos que crear una función "item" y como cualquier función debe llevar paréntesis al final() y después dos puntos : .
+Luego tenemos que crear una función *item* y como cualquier función debe llevar paréntesis al final() y después dos puntos : .
 La función item nos va a permitir crear una visita dentro del diccionario. Nos da acceso a todos los elementos y por eso podemos pasar dos variables.
 
     for posición, jugador in jugadores.item():
@@ -144,9 +144,11 @@ Así, esto nos devolvería lo siguiente:
 ~~~  
 
 
-Podemos utilizar 'for in' para fusionar varias listas.
+Podemos utilizar *for...in* para fusionar varias listas.
 
 Por ejemplo: tenemos una lista de clientes_antiguos y otra de clientes_nuevos y queremos juntar ambas. Pero no queremos que nos dé dos listas juntas, sino que queremos que sean cadenas juntas.  
+
+
 ~~~  
     clientes_antiguos = ['Alba','Ibai']
     clientes_nuevos = ['Raquel', 'Zuri']
@@ -155,24 +157,29 @@ Por ejemplo: tenemos una lista de clientes_antiguos y otra de clientes_nuevos y 
         print(clientes_nuevos)
 ~~~  
 
-La función append añadida a clientes_nuevos. Esta función vale para todo tipo de datos en listas.  
+La función *append* añadida a clientes_nuevos. Esta función vale para todo tipo de datos en listas.  
 El bucle for lo que hace es iterar nuestra lista de clientes_antiguos y con cada bucle introducimos los datos de la siguiente lista que es clientes_nuevos. Iteramos esta última lista y tratamos sus elementos como cadenas normales.  
 
 Los bucles pueden ir desde el principio de un programa hasta el final. Pero a veces puedes querer parar o alterar el comportamineto de una lista en algún momento determinado.  
 En este caso tenemos dos operadores de control de flujo: continue y break.
 Quiero que en una lista de nombres cuando llegue el bucle a un nombre concreto cambie su comportamiento. Sólo quiero que haga determinada acción al ver ese nombre.  
 
-~~~
-nombres= ['Ibai', 'Alba', 'Raquel', 'Zuri']
-for nombre in nombres:
-    if nombre=='Raquel':
-        print (f' Lo siento, {nombre}, no estas autorizado')
-        continue
-    else:
-        print(f' {nombre} estas autorizado')
+~~~ 
+    nombres= ['Ibai', 'Alba', 'Raquel', 'Zuri']
+    for nombre in nombres:
+        if nombre=='Raquel':
+            print (f' Lo siento, {nombre}, no estas autorizado')
+            continue
+        else:
+            print(f' {nombre} estas autorizado')
 ~~~  
 
-Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario con nombre Raquel, camnbia el comportamiento. Pero lo más importante es que sigue adelante y continúa analizando el resto de elementos. Continue le dice al programa que tiene que continuar con el bucle. Sigue itinerando sin parar una vez que encuentra lo que busca. Hace bucle en todos los nombres de la lista.   
+
+Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario con nombre Raquel, camnbia el comportamiento. Pero lo más importante es que sigue adelante y continúa analizando el resto de elementos. *Continue* le dice al programa que tiene que continuar con el bucle. Sigue itinerando sin parar una vez que encuentra lo que busca. Hace bucle en todos los nombres de la lista.  
+
+! [Blucle continue] (Users\IBAI\OneDrive\Escritorio\checkpoint5\3.png · Untraked)
+
+<img src= "Users\IBAI\OneDrive\Escritorio\checkpoint5\images.md\3.png"alt="Bucle continue" width="500">  
 
 
 ~~~
@@ -182,7 +189,7 @@ Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario c
     Zuri estas autorizado
 ~~~  
 
-Esto es lo opuesto a lo que haría "break". Este operador busca y destruye. Mira la lista de nombres y si encuentra el valor que hemos dado no le importa lo demás. Cuando encuentra la condición acaba.  
+Esto es lo opuesto a lo que haría *break*. Este operador busca y destruye. Mira la lista de nombres y si encuentra el valor que hemos dado no le importa lo demás. Cuando encuentra la condición acaba.  
 
 ~~~
     for nombre in nombres:
@@ -192,7 +199,7 @@ Esto es lo opuesto a lo que haría "break". Este operador busca y destruye. Mira
         print(nombre)
 ~~~  
 
-En la misma línea de la declaración "print" pongo "break" porque tienen que estar anidados dentro del condicional "if". El último "print" sale fuera porque cualquier cosa despúes de "break" no pasará anidado dentro del bloque de código.  
+En la misma línea de la declaración *print* pongo *break* porque tienen que estar anidados dentro del condicional *if*. El último *print* sale fuera porque cualquier cosa despúes de *break* no pasará anidado dentro del bloque de código.  
 
 
 ~~~
@@ -201,20 +208,22 @@ En la misma línea de la declaración "print" pongo "break" porque tienen que es
     Raquel se encuentra en index 2
 ~~~  
 
-El programa sólo sirve para decirnos en que indice se encuentra nuestro elemento. La clave aquí es que todo lo que va en la lista después de nuestro valor, no estrará incluído. "Break" te saca de la condicional, mira arriba, atraviesa la cadena y cuando encuentra lo que está en el bucle, le dice a Python que ya lo ha encontrado y sale del bucle. 
+El programa sólo sirve para decirnos en qué índice se encuentra nuestro elemento. La clave aquí es que todo lo que va en la lista después de nuestro valor, no estrará incluído. *Break* te saca de la condicional, mira arriba, atraviesa la cadena y cuando encuentra lo que está en el bucle, le dice a Python que ya lo ha encontrado y sale del bucle. 
 
 
 
-__Bucle while__
+<h2>Bucle while</h2>
 
-Un bucle while es una estructura de control de flujo en programación que permite ejecutar repetidamente un bloque de código mientras una condición específica se determina como verdadera. La condición se evalúa al principio de cada iteración del bucle, y el bloque de código se ejecuta mientras la condición siga siendo verdadera. Si la condición es falsa desde el principio, el bloque de código dentro del while nunca se ejecutará.
+Un *bucle while* es una estructura de control de flujo en programación que permite ejecutar repetidamente un bloque de código mientras una condición específica se determina como verdadera. La condición se evalúa al principio de cada iteración del bucle, y el bloque de código se ejecuta mientras la condición siga siendo verdadera. Si la condición es falsa desde el principio, el bloque de código dentro del while nunca se ejecutará.
 
-En el bucle while no se conoce el número de repeticiones que quieres en un programa y puede repetirse indefinidamente siempre que la secuencia sea verdadera.
-Hay que especificar cuando tiene que detenerse porque puede convertirse en un bucle infinito y el programa no se va a detener nunca hasta que cambie la condición. Puede hacer que un programa se bloquee.
+En el *bucle while* no se conoce el número de repeticiones que quieres en un programa y puede repetirse indefinidamente siempre que la secuencia sea verdadera.
+Hay que especificar cuando tiene que detenerse porque puede convertirse en un bucle infinito y el programa no se va a detener nunca hasta que cambie la condición. Puede hacer que un programa se bloquée.  
+
+
 Un valor centinela es el término para definir cuando debe pararse este bucle.
 
-El bucle while es útil cuando no se conoce de antemano cuántas veces se necesita ejecutar el código, sino que la ejecución depende de una condición. 
-Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la solicitud hasta que se ingrese una entrada correcta. Si introduce un dato erroneo entoncés el programa se detiene.  
+El *bucle while* es útil cuando no se conoce de antemano cuántas veces se necesita ejecutar el código, sino que la ejecución depende de una condición. 
+Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la solicitud hasta que sean correctos. Si introduce un dato erróneo entonces el programa se detiene.  
 
 ~~~
     contador= 0
@@ -226,16 +235,16 @@ Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la 
 ~~~  
 
 
-En este ejemplo el bucle while se ejecutará 5 veces. Desde el 0 al 4.
+En este ejemplo el *bucle while* se ejecutará 5 veces. Desde el 0 al 4.
 La condición es que el contador sea menor que 5 y el bucle continuará ejecutándose hasta que esto deje de ser cierto. Mientras la variable contador sea menor que 5, el código dentro del bloque se ejecuta.  
 
 
-Imprimimos el valor que hemos dado al principio (contador=0) y luego tenemos que ir incrementando ese contador en 1. Este paso es importante para que la condición se vuelva falsa en algún momento y el bucle se detenga. Cuando esto suceda mostramos 'Bucle terminado'.
+Imprimimos el valor que hemos dado al principio (contador=0) y luego tenemos que ir incrementando ese contador en 1. Este paso es importante para que la condición se vuelva falsa en algún momento y el bucle se detenga. Cuando esto suceda mostramos *Bucle terminado*.
 
-No es tan intuitivo como el bucle for. Se usa bastante menos.  
+No es tan intuitivo como el *bucle for*. Se usa bastante menos.  
 
-Para adivinar un deteminado número o en juegos de adivinanzas es una buena opción este bucle. En estos casos no se sabe cuantas veces se debe repetir el programa.
-Pides al usuario que adivine un número y hasta que acierte, el programa seguirá ejecutándose. (No podríamos usar el bucle "for in" porque no sabemos cuando va a acertar).  
+Para adivinar un deteminado número o en juegos de adivinanzas es una buena opción este bucle. En estos casos no se sabe cuántas veces se debe repetir el programa.
+Pides al usuario que adivine un número y hasta que acierte,el programa seguirá ejecutándose. (No podríamos usar el bucle *for in* porque no sabemos cuándo va a acertar).  
 
 ~~~
     import randow
@@ -260,20 +269,21 @@ Se importa primero el módulo randow para generar un número secreto aleatorio y
 El primer intento damos un número que sea falso para que el bucle while se ejecute al menos una vez. Y asi seguirá ejecutándose hasta que el usuario acierte el número secreto.  
 
 Los **bucles son útiles** porque nos permiten ejecutar repetidamente un bloque de código sin tener que escribirlo varias veces.
-Si necesitas realizar la misma tarea múltiples veces pero con ligeras variaciones, puedes ahorrar tiempo y reduces la probabilidad de errores. El código se vuelve más compacto y fácil de entender.
+Si necesitas realizar la misma taréa múltiples veces pero con ligeras variaciones, puedes ahorrar tiempo y reduces la probabilidad de errores. El código se vuelve más compacto y fácil de entender.
 Iterar sobre una secuencia ya sea lista, tupla o diccionario significa recorrer cada elemento uno por uno. Asi los bucles consiguen crear programas dinámicos capaces de realizar tareas repetitivas de forma eficiente.  
 
 
 
-3.***LISTA POR COMPRESIÓN EN PYTHON***
+# 3. LISTA POR COMPRESIÓN EN PYTHON
+
 
 Es una forma concisa de crear listas en Python.
-Una lista por comprensión es una construcción sintáctica elegante y concisa que permite crear nuevas listas basadas en listas existentes de una manera más clara y a menudo más eficiente que utilizando bucles for tradicionales.  
+Una lista por compresión es una construcción sintáctica elegante y concisa que permite crear nuevas listas basadas en listas existentes de una manera más clara y a menudo más eficiente que utilizando bucles for tradicionales.  
 
 Una lista por comprensión ofrece una forma abreviada de poner una expresión a cada elemento de una secuencia (como una lista, tupla o rango) y, opcionalmente, filtrar los elementos que cumplen una determinada condición, todo dentro de una única línea de código.
 
 
-La compresión de listas es una forma eficiente de iterar una lista con pocas líneas de código. En programas grandes la eficencia es fundamental, ocupar poco espacio y menos código. Principalmente para evitar errores.
+La compresión de listas es una forma eficiente de iterar una lista con pocas líneas de código. En programas grandes esto es fundamental, ocupar poco espacio y menos código. Principalmente para evitar errores.
 
 ~~~
     my_list = ['good', 'play', 'futbol']
@@ -301,13 +311,13 @@ Nos daría los elementos de "my_list" multiplicados por dos [2, 4, 6, 8, 10]
  Nos devuelve la primera letra de cada nombre: ['A', 'B', 'C', 'D']
 
 
-4.***ARGUMENTO EN PYTHON***
+# 4. ARGUMENTO EN PYTHON
 
 En Python, un argumento es un valor o expresión que se pasa a una función cuando se la llama. Estos argumentos se utilizan para proporcionar a la función la información que necesita para realizar su tarea. Los argumentos pueden ser de tipo posicional (se pasan por posición) o de tipo nombre (se pasan con un nombre).  
 
 
 
-__Argumentos Posicionales__  
+<h2> Argumentos Posicionales</h2>
 
 Cada vez que pasamos valores de argumento a funciones usamos lo que se llama argumentos posicionales. Según el sitio o el valor que le quieras dar. Deben incluírse en la posición u orden adeciuados. El primer argumento posicional siempre debe aparecer el primero a la hora de llamar a la función. El segundo en segundo lugar y así sucesivamente. 
 
@@ -333,7 +343,7 @@ Todo se basa en la posición de los argumentos.
 
 
 
-__Argumentos de nombre__
+<h2> Argumentos de nombre</h2>
 
 
 Son aquellos que se pasan a la función especificando el nombre del parámetro al que se asignan.  
@@ -360,12 +370,12 @@ Además, Python permite utilizar indistintamente argumentos de nombre o posicion
 
 Lo ideal es usar argumentos con nombre cuando hay más de dos argumentos, para evitar problemas de colocar los valores en el orden incorrecto o llamarlos con un nombre distinto.  
 
-__Argumento con valor por defecto__  
+<h2> Argumento con valor por defecto</h2>
 
 Son argumentos que se les asigna un valor en el código de la función, pero también se pueden sobrescribir en tiempo de ejecucuón.  
 
 ~~~ 
-    def multiplicación (a, b **=**  6):
+    def multiplicación (a, b ***=*** 6):
         return a * b
 
     print1= multiplicación (2)
@@ -375,7 +385,7 @@ Son argumentos que se les asigna un valor en el código de la función, pero tam
 El primer resultado nos daría 12 (2 por 6, mantenemos el valor que hemos puesto arriba) y el segundo 10 (2 por 5, hemos sobrescrito el valor de b).  
 Se pueden definir valores por defecto para los argumentos en caso de no ser enviados en la función.  
 
-__Argumentos con palabras clave__  
+<h2>Argumentos con palabras clave</h2>
 
 Se definen sin más mediante la palabra clave seguida del signo igual y su valor correspondiente. Hacen nuestro código más legible y adaptable. Porque al ver la llamada a la función, es inmediatamente obvio qué valor se está asignando a cada parámetro. Esto hace que el código sea más fácil de entender. No tienes que poner los elementos en orden.
 Puedes pasarlos en cualquier orden, siempre y cuando especifiques el nombre del parámetro.  
@@ -389,15 +399,15 @@ Puedes pasarlos en cualquier orden, siempre y cuando especifiques el nombre del 
 
   
 
-5.***FUNCIÓN LAMBDA EN PYTHON***  
+# 5 . FUNCIÓN LAMBDA EN PYTHON  
 
 
-La función Lambda es una herramienta que nos permite empaquetar una función y luego introducirla en otras funciones. Son muy móviles y fáciles de usar.  
+La función *Lambda* es una herramienta que nos permite empaquetar una función y luego introducirla en otras funciones. Son muy móviles y fáciles de usar.  
 
 Es muy similar a una variable que se puede introducir en lugar de un valor básico como una cadena o un diccionario. 
 Una variable almacena datos una función lambda (o cualquier función) almacena código.
 Nos permite empaquetar un proceso.
-Una lambda siempre devuelve un valor.  
+Una *lambda* siempre devuelve un valor.  
 
 Su sintaxis es:
     argumentos lambda: expresión
@@ -412,15 +422,16 @@ El valor de retorno de la función lambda es el valor al que se evalua esta expr
 
 
 Devolvemos un valor de nombre completo y lo almacenamos en la variable nombre_completo.
-Después de llamar a lambda escribimos una serie de argumentos, en este caso, nombre y apellido. Lo que vaya dentro de las comillas es lo que devolverá lambda. En este caso hemos formateado una cadena que toma la variable de nombre y apellido.
-Después hay que imprimirlo porque lambda sólo devuelve valor. 
+Después de llamar a lambda escribimos una serie de argumentos, en este caso, nombre y apellido. Lo que vaya dentro de las comillas es lo que devolverá *lambda*.
+En este caso hemos formateado una cadena que toma la variable de nombre y apellido.
+Después hay que imprimirlo porque *lambda* sólo devuelve valor. 
 Nos daría como resultado: Alba González.  
 
 Las funciones lambda son anónimas, no tienen un nombre formal como las funciones 'def'. Generalmente se asignan a una variable para poder llamarlas.
-La sintáxis es concisa mucho más que en las funciones 'def'. 
+La sintáxis es concisa mucho más que en las funciones *def*.
 Están creadas para utilizarse en expresiones simples que se puedan hacer en una sola línea.
 El cuerpo de la función lambda debe ser una única expresión. No pueden contener múltiples referencias o bloques de código complejos.
-Son adecuadas para operaciones sencillas. Para lógica compleja las funciones 'def' son más legibles y mantenibles.  
+Son adecuadas para operaciones sencillas. Para lógica compleja las funciones *def* son más legibles y adecuadas.
 
 La función lambda suele utilizarse para lo siguiente: como argumento que son pasados a otras funciones de orden superior, o para construir el resultado de una función de orden superior que necesita retornar una función.
 
@@ -431,7 +442,8 @@ La función lambda suele utilizarse para lo siguiente: como argumento que son pa
 ~~~  
     
 
-Las funciones lambda pueden aceptar cero o más argumentos, pero __sólo una expresión__.   
+Las funciones lambda pueden aceptar cero o más argumentos, pero **sólo una expresión**.  
+
 
 ~~~
     f= lambda x: x*x
@@ -441,7 +453,7 @@ Las funciones lambda pueden aceptar cero o más argumentos, pero __sólo una exp
 
 Nos daría como resultado 25.  
 
-Ahora pasamos dos argumentos  
+Ahora pasamos dos argumentos: 
 
 ~~~
     f= lambda x, y : x* y
@@ -454,15 +466,15 @@ Nos daría como resultado 10.
 
 
 
-6.***PAQUETE PIP***    
+# 6 . PAQUETE PIP      
 
 
 Un paquete es una colección de archivos, módulos y dependencias relacionados que pueden utilizarse repetidamente en diferentes aplicaciones y problemas.
 Pip es un gestor de paquetes estándar en Python.  
 
-Pip es un sistema de gestión de paquetes para Python. Su nombre proviene de “Pip Installs Packages” o “Pip Instala Paquetes” en español.
+Pip es un sistema de gestión de paquetes para Python. Su nombre proviene de *Pip Installs Packages* o *Pip Instala Paquetes* en español.
 
-Con pip, podemos instalar, actualizar y desinstalar paquetes de Python e un ordenador de manera sencilla.
+Con pip, podemos instalar, actualizar y desinstalar paquetes de Python en un ordenador de manera sencilla.
 
 Los paquetes son colecciones de módulos y funciones que pueden ser distribuidos y utilizados por otros programadores.  
 
@@ -483,7 +495,7 @@ Para desintalarlo sólo hay que usar
 
 Hay paquetes que están ya incorporados en Python o que podemos crear nosotros mismos. Con pip podemos incorporar módulos creados por otros desarrolladores y usarlos en nuestros propios programas.  
 
-Una vez instalado pip podemos gestionar paquetes diferentes...
+Una vez instalado pip podemos gestionar paquetes diferentes.
 
 Sólo hay que llamar a pip seguido por install y el nombre del paquete.
 
@@ -493,7 +505,6 @@ Sólo hay que llamar a pip seguido por install y el nombre del paquete.
 
 Requests, por ejemplo, es un paquete muy utilizado para hacer solicitudes HTTP en Python.  
 
-
-
+El paquete pip también te permite mantener tus librerías actualizadas o eliminar librerías que ya no usas.
 
 
