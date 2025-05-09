@@ -21,15 +21,15 @@ Utilizamos "if" para indicar que si lo que pongo en el código es verdadero quie
 Es el código que se ejecutará unicamente si la condición es verdadera.
 Si hubiese sido mentira( a>b) la instrucción no se ejecuta.
 
-Cuando utilizamos "if" siempre tiene que terminar la sentencia en dos puntos :
+Cuando utilizamos *if* siempre tiene que terminar la sentencia en dos puntos :
 y el bolque de código debe estar anidado. 
 
-Es posible que no sólo queramos hacer algo si una determinada condición se cumple, sino que además queramos hacer algo de lo contrario. En este caso se utiliza el condicional "else". Si usamos "if" y es falso entonces podemos usar otra condición 'else'.
+Es posible que no sólo queramos hacer algo si una determinada condición se cumple, sino que además queramos hacer algo de lo contrario. En este caso se utiliza el condicional *else*. Si usamos *if* y es falso entonces podemos usar otra condición *else*.
 
 <h2>else</h2>
 
 
-Si tenemos un código en el que "if" no se cumple entonces podemos utilizar la sentencia "else" asi das otra condición.  
+Si tenemos un código en el que *if* no se cumple entonces podemos utilizar la sentencia *else* asi das otra condición.  
 
 
 ~~~
@@ -55,14 +55,19 @@ elif age >21:
     print ('puedes conducir y alquilar un coche')
 else:
     print('puedes conducir')  
-~~~
+~~~  
+
+<img src= "images.md/condicionales.png " alt = "Condicionales" width="400">  
+
+***
+
 
 
 # 2.BLUCLES EN PYTHON  ¿Por qué son útiles?
 
 Los bucles son una herramienta para alterar el flujo normal de un programa. Nos permiten repetir una porción de código tantas veces como queramos.
 
-Hay dos tipos de bucles *for...in* y *while*. Ambos se pueden usar para colecciones, rangos de números, listas, tuplas o diccionarios.
+Hay dos tipos de bucles *for in* y *while*. Ambos se pueden usar para colecciones, rangos de números, listas, tuplas o diccionarios.
 ES imprescindible marcar un inicio y señalar las condiciones verdaderas o falsas. La iteración sucede cuando es verdadera y para cuando es falsa.
 Con for se produce un número limitado de veces, con while es indefinido hasta que cambia la condición.
 
@@ -112,7 +117,12 @@ Esto nos devuelve la tupla de la misma forma que si hubieramos usado una lista.
 La sintaxis es similar para usar los blucles, aunque ahora no trabajamos con un único elemento, necesitamos coger la clave y el valor. Despues de pasar el bucle for hay que darle dos elementos. Si antes teníamos jugador, ahora le damos tambien un valor de la posición en la que juega cada uno.
 
 Luego tenemos que crear una función *item* y como cualquier función debe llevar paréntesis al final() y después dos puntos : .
-La función item nos va a permitir crear una visita dentro del diccionario. Nos da acceso a todos los elementos y por eso podemos pasar dos variables.
+La función item nos va a permitir crear una visita dentro del diccionario. Nos da acceso a todos los elementos y por eso podemos pasar dos variables.  
+
+<img src="images.md/futbol.png" alt= "Bucle" width="300">  
+
+***  
+
 
     for posición, jugador in jugadores.item():
 
@@ -120,7 +130,7 @@ La función item nos va a permitir crear una visita dentro del diccionario. Nos 
     jugadores = {
         'medio' : 'Pedri',
         'lateral' : 'Gabi',
-        'central' : 'Ferrán'
+        'delantero' : 'Ferrán'
     }
     for posición, jugador in jugadores.items():
         print('Posición', posición)
@@ -133,13 +143,16 @@ Nuestro primer item que es 'Pedri' va a ser asignado con la posición 'medio'.
 La variable posición es igual a la clave y jugador es igual al valor.
 La importancia de la sangría es clave después de dos puntos ':' en Python. Por eso print en estos casos tiene que ir con sangría. Siempre pueden ser de dos espacios o cuatro.
 Así, esto nos devolvería lo siguiente:  
+  
+    
+
 
 ~~~
     Posición medio
     Nombre Jugador Pedri
     Posición lateral
     Nombre Jugador Gabi
-    Posición central
+    Posición delantero
     Nombre Jugador Ferrán
 ~~~  
 
@@ -158,7 +171,15 @@ Por ejemplo: tenemos una lista de clientes_antiguos y otra de clientes_nuevos y 
 ~~~  
 
 La función *append* añadida a clientes_nuevos. Esta función vale para todo tipo de datos en listas.  
-El bucle for lo que hace es iterar nuestra lista de clientes_antiguos y con cada bucle introducimos los datos de la siguiente lista que es clientes_nuevos. Iteramos esta última lista y tratamos sus elementos como cadenas normales.  
+El bucle for lo que hace es iterar nuestra lista de clientes_antiguos y con cada bucle introducimos los datos de la siguiente lista que es clientes_nuevos. Iteramos esta última lista y tratamos sus elementos como cadenas normales. Primero se añade el primer elemento de clientes_antiguos (Alba) y el bucle continúa cogiendo el segundo elemento (Ibai).  
+
+
+['Raquel', 'Zuri', 'Alba']
+['Raquel', 'Zuri', 'Alba', 'Ibai']  
+
+***  
+
+
 
 Los bucles pueden ir desde el principio de un programa hasta el final. Pero a veces puedes querer parar o alterar el comportamineto de una lista en algún momento determinado.  
 En este caso tenemos dos operadores de control de flujo: continue y break.
@@ -177,9 +198,11 @@ Quiero que en una lista de nombres cuando llegue el bucle a un nombre concreto c
 
 Si encuentra la condición y es verdadera, es decir, si encuentra a un usuario con nombre Raquel, camnbia el comportamiento. Pero lo más importante es que sigue adelante y continúa analizando el resto de elementos. *Continue* le dice al programa que tiene que continuar con el bucle. Sigue itinerando sin parar una vez que encuentra lo que busca. Hace bucle en todos los nombres de la lista.  
 
-! [Blucle continue] (Users\IBAI\OneDrive\Escritorio\checkpoint5\3.png · Untraked)
 
-<img src= "Users\IBAI\OneDrive\Escritorio\checkpoint5\images.md\3.png"alt="Bucle continue" width="500">  
+
+<img src= "images.md/continue.png" alt="Bucle continue" width="300">  
+
+***
 
 
 ~~~
@@ -236,7 +259,7 @@ Se puede usar para pedir a un usuario que ingrese datos válidos, repitiendo la 
 
 
 En este ejemplo el *bucle while* se ejecutará 5 veces. Desde el 0 al 4.
-La condición es que el contador sea menor que 5 y el bucle continuará ejecutándose hasta que esto deje de ser cierto. Mientras la variable contador sea menor que 5, el código dentro del bloque se ejecuta.  
+La condición es que el contador sea menor que 5 y el bucle continuará ejecutándose hasta que esto deje de ser cierto. Mientras la variable contador sea menor que 5, el código dentro del bloque se ejecuta. Y este será el valor centinela en este caso  *contador <5*.
 
 
 Imprimimos el valor que hemos dado al principio (contador=0) y luego tenemos que ir incrementando ese contador en 1. Este paso es importante para que la condición se vuelva falsa en algún momento y el bucle se detenga. Cuando esto suceda mostramos *Bucle terminado*.
@@ -427,7 +450,8 @@ En este caso hemos formateado una cadena que toma la variable de nombre y apelli
 Después hay que imprimirlo porque *lambda* sólo devuelve valor. 
 Nos daría como resultado: Alba González.  
 
-Las funciones lambda son anónimas, no tienen un nombre formal como las funciones 'def'. Generalmente se asignan a una variable para poder llamarlas.
+Las funciones lambda son anónimas, no tienen un nombre formal como las funciones *def*.
+Generalmente se asignan a una variable para poder llamarlas.
 La sintáxis es concisa mucho más que en las funciones *def*.
 Están creadas para utilizarse en expresiones simples que se puedan hacer en una sola línea.
 El cuerpo de la función lambda debe ser una única expresión. No pueden contener múltiples referencias o bloques de código complejos.
