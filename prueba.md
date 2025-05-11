@@ -355,7 +355,7 @@ En este caso, 3 y 5 son argumentos posicionales que se pasan a los parámetros a
 Esto está bien para funciones pequeñas, en grandes los argumentos posicionales pueden generar confusión. 
 
 ~~~
-    def nombre_completo('nombre', 'apellido'):
+    def nombre_completo(nombre, apellido):
         print(f' {nombre}{apellido})
     nombre_completo ('Alba', 'Gonzalez')
 ~~~  
@@ -382,13 +382,15 @@ En este caso, b=5 y a=3 son argumentos de nombre.
 El orden en que se pasan los argumentos de nombre no importa.  
 
 ~~~
-    def nombre_completo('nombre', 'apellido'):
-        print (f'{nombre}{apellido})
+    def nombre_completo(nombre, apellido):
+        print (f'{nombre} {apellido}')
     nombre_completo(nombre='Alba', apellido= 'González')
 ~~~  
 
 Aquí los argumentos con nombre nos permiten ser mucho más explícitos. En lugar de simplemente pasar una cadena pasamos el nombre. El programa examina la llamada a función y verá que hemos configurado argumentos con nombre. Primero coge el primer elemento y así sucesivamente. Pero no importa la posición en la que están colocados los argumentos.
-Además, Python permite utilizar indistintamente argumentos de nombre o posicionales en las funciones como tú desees. Puedes intercambiarlos.  
+Además, Python permite utilizar indistintamente argumentos de nombre o posicionales en las funciones como tú desees. Puedes intercambiarlos. 
+
+<img src="image.png">
 
 
 Lo ideal es usar argumentos con nombre cuando hay más de dos argumentos, para evitar problemas de colocar los valores en el orden incorrecto o llamarlos con un nombre distinto.  
@@ -418,7 +420,10 @@ Puedes pasarlos en cualquier orden, siempre y cuando especifiques el nombre del 
         print(f' {nombre} {despedida}')
     despedir(nombre="Ibai", despedida="adios")
     despedir(despedida= 'Adios' , nombre= 'Ibai')
+
 ~~~  
+
+<img src="image-2.png">
 
   
 
@@ -461,7 +466,7 @@ La función lambda suele utilizarse para lo siguiente: como argumento que son pa
 
 ~~~
     es_par= lambda_numero = numero %2 ==0
-    print(f'(numero 10 es par?))
+    print(f'(numero 10 es par?)')
 
 ~~~  
     
@@ -472,7 +477,7 @@ Las funciones lambda pueden aceptar cero o más argumentos, pero **sólo una exp
 ~~~
     f= lambda x: x*x
     f(5)
-    
+    print (f(5))
 ~~~  
 
 Nos daría como resultado 25.  
@@ -482,18 +487,23 @@ Ahora pasamos dos argumentos:
 ~~~
     f= lambda x, y : x* y
     f(5,2)
+    print(f(5,2))
 ~~~  
 
 
-Nos daría como resultado 10.
+Nos daría como resultado 10.  
+
+<img src= "images.md/Captura de pantalla 2025-05-11 004529.png" alt= "Lambda" width="800" >
 
 
 
 
 # 6 . PAQUETE PIP      
 
+Vamos a incorporar mólulos creados por otros desarrolladores y los incorporamos a nuestros programas.  
 
-Un paquete es una colección de archivos, módulos y dependencias relacionados que pueden utilizarse repetidamente en diferentes aplicaciones y problemas.
+
+Para esto, el paquete *pip* es una colección de archivos, módulos y dependencias relacionados que pueden utilizarse repetidamente en diferentes aplicaciones y problemas.
 Pip es un gestor de paquetes estándar en Python.  
 
 Pip es un sistema de gestión de paquetes para Python. Su nombre proviene de *Pip Installs Packages* o *Pip Instala Paquetes* en español.
@@ -519,6 +529,7 @@ Para desintalarlo sólo hay que usar
 
 Hay paquetes que están ya incorporados en Python o que podemos crear nosotros mismos. Con pip podemos incorporar módulos creados por otros desarrolladores y usarlos en nuestros propios programas.  
 
+
 Una vez instalado pip podemos gestionar paquetes diferentes.
 
 Sólo hay que llamar a pip seguido por install y el nombre del paquete.
@@ -529,6 +540,17 @@ Sólo hay que llamar a pip seguido por install y el nombre del paquete.
 
 Requests, por ejemplo, es un paquete muy utilizado para hacer solicitudes HTTP en Python.  
 
-El paquete pip también te permite mantener tus librerías actualizadas o eliminar librerías que ya no usas.
+El paquete pip también te permite mantener tus librerías actualizadas o eliminar librerías que ya no usas.   
+
+Vamos a hacer un ejemplo con MumPy que es un paquete muy potente que permite procesar números, registros y objetos.
+ Esta es una biblioteca muy importante en Python. NumPy te permite procesar grandes colecciones de datos de forma muy eficiente. Por lo tanto, para cosas que normalmente requerirían muchas líneas de código, NumPy tiene esos procesos integrados directamente en la biblioteca, y puedes simplemente llamarlos y usarlos en tus propios programas. 
+ 
+ Para instalarlo, hay que poner primero "pip install" en la terminal y escribir el nombre de la biblioteca. En este caso, será NumPy.  
+
+ ~~~
+    pip install NumPy
+~~~  
+
+<img src= "images.md/image4.png" alt="pip" width="800">
 
 
