@@ -31,6 +31,18 @@ EJERCICIO 4.
 
 
 nombres= ['Jessica', 'Paul', 'George', 'Henry', 'Adan']
-nombre= ' Enrique'
+nombre= ' Enrique '
 for nombre in nombres:
-    print(nombre) 
+    if nombre == 'Enrique':
+        nombre= "se encuentra en la lista"
+    else:
+        nombre= 'no se encuentra en la lista'
+    print(nombre)
+
+
+nombres= ['Jessica', 'Paul', 'George', 'Henry', 'Adan']
+nombre= ' Enrique '
+if nombre in nombres:       
+    print ("se encuentra en la lista")
+else:
+    print ('no se encuentra en la lista')
